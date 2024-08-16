@@ -71,7 +71,7 @@ Requirements(18):
 6. Use appendChild and/or prepend to add new elements to the DOM.
     * utilized the above forEach to append each new <a> element to the navBar 
 7. Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content. 
-<!-- don't exactly know what this is, but I plan to use it to perhaps make informatino cards for the exhibit page -->
+    * utilized DocumentFragment to create card template - wasn't sure how to do this at first but followed the following documentation (https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) and example and modified to cards instead of list items. 
 8. Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
 <!-- on click/on submit for contact form, add an <h1> to the screen to replace the contact for that says "thank you for contacting us, we will get back to you soon!" -->
 9. Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.

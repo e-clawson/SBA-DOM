@@ -6,11 +6,11 @@ let navBarTabs = [
     { text: "contact", href: "/contact.html" },
 ]
 let cardsInfo = [
-    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
-    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
-    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
-    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
-    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
+    { title: "title", subTitle: "subtitle", date: 1900, textBody: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
+    { title: "title", subTitle: "subtitle", date: 1900, textBody: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
+    { title: "title", subTitle: "subtitle", date: 1900, textBody: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
+    { title: "title", subTitle: "subtitle", date: 1900, textBody: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
+    { title: "title", subTitle: "subtitle", date: 1900, textBody: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
 ]
 
 //selected title for page to ensure js was being read by index.html
@@ -41,10 +41,26 @@ console.log(cardContainer)
 const fragment = new DocumentFragment();
 
 cardsInfo.forEach((card) => {
-    infoCard = document.createElement("div")
-    title = document.createElement("h3")
-    title.textContent = card.title
-    infoCard.appendChild(title)
-    cardContainer.appendChild(infoCard)
+    infoCard = document.createElement("div");
+    infoCard.classList.add("card")
+
+    title = document.createElement("h2");
+    title.textContent = card.title;
+
+    subTitle = document.createElement("h3");
+    subTitle.textContent = card.subTitle;
+
+    date = document.createElement("p");
+    date.textContent = card.date;
+
+    textBody = document.createElement("p");
+    textBody.textContent = card.textBody;
+
+    infoCard.appendChild(title);
+    infoCard.appendChild(subTitle);
+    infoCard.appendChild(date);
+    infoCard.appendChild(textBody);
+    
+    fragment.append(infoCard)
 })
-console.log(infoCard)
+cardContainer.append(fragment)
