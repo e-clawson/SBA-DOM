@@ -1,9 +1,12 @@
 //created navBar tabs data to populate the NavBer 
 let navBarTabs = [
-    { text: "home", href: "/home" },
-    { text: "about", href: "/about" },
+    { text: "home", href: "/index.html" },
+    { text: "about", href: "/about.html" },
     { text: "exhibits", href: "/exhibits" },
-    { text: "contact", href: "/contact" },
+    { text: "contact", href: "/contact.html" },
+]
+let cardInfo = [
+    {}
 ]
 
 //selected title for page to ensure js was being read by index.html
