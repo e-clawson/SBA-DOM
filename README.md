@@ -57,23 +57,37 @@ The requirements listed here are absolute minimums. Ensure that your application
 
 Create your application locally, and initialize a local git repo. Make frequent commits to the repo. When your application is complete, push your repo to GitHub and submit the link to the GitHub page using the submission instructions at the top of this document.
 
-Requirements: 
+Requirements(18): 
 
-- (x) Cache at least one element using selectElementById.
-- (x) Cache at least one element using querySelector or querySelectorAll.
-- Use the parent-child-sibling relationship to navigate between elements at least once (firstChild, lastChild, parentNode, nextElementSibling, etc.).
-- (x) Iterate over a collection of elements to accomplish some task. (forEach)
-- (x) Create at least one element using createElement.
-- (x) Use appendChild and/or prepend to add new elements to the DOM.
-- Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content. 
-- Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
-- Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
-- Modify at least one attribute of an element in response to user interaction.
-- Register at least two different event listeners and create the associated event handler functions.
-- Use at least two Browser Object Model (BOM) properties or methods.
-- Include at least one form and/or input with HTML attribute validation.
-- Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
-- Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
-- Commit frequently to the git repository. (8 - 10 commits)
-- Include a README file that contains a description of your application.
-- Level of effort displayed in creativity, presentation, and user experience.
+1. Cache at least one element using selectElementById.
+    * added a getElementById to cache the header element in the variable headerEl 
+2. Cache at least one element using querySelector or querySelectorAll.
+    * added a querySelector to index.js to find the first instance of an h1 to cache in the variable headerEl
+3. Use the parent-child-sibling relationship to navigate between elements at least once (firstChild, lastChild, parentNode, nextElementSibling, etc.).
+4. Iterate over a collection of elements to accomplish some task. (forEach)
+    * utilized forEach to iterate over the collection navBarTabs to create a tags with links for each to populate the navigation bar 
+5. Create at least one element using createElement.
+    * utilized the above forEach to create <a> elements for each navbar item 
+6. Use appendChild and/or prepend to add new elements to the DOM.
+    * utilized the above forEach to append each new <a> element to the navBar 
+7. Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content. 
+<!-- don't exactly know what this is, but I plan to use it to perhaps make informatino cards for the exhibit page -->
+8. Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
+<!-- on click/on submit for contact form, add an <h1> to the screen to replace the contact for that says "thank you for contacting us, we will get back to you soon!" -->
+9. Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
+<!-- update the nav bar to change color on click like we did in our lessons -->
+10. Modify at least one attribute of an element in response to user interaction.
+11. Register at least two different event listeners and create the associated event handler functions.
+<!-- on click for the nav bar and on submit for the contact form  -->
+12. Use at least two Browser Object Model (BOM) properties or methods.
+13. Include at least one form and/or input with HTML attribute validation.
+<!-- contact form - require name to be filled, require email to match email requirements -->
+14. Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
+<!-- same as above - gotta dig deeper into this  -->
+15. Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
+<!-- so far so good - techically it is an MPA right now not and SBA but other than that is is working  -->
+16. Commit frequently to the git repository. (8 - 10 commits)
+    * committed at least 9 times already 
+17. Include a README file that contains a description of your application.
+    * please enjoy the current README
+18. Level of effort displayed in creativity, presentation, and user experience.

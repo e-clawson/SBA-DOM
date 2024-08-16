@@ -5,8 +5,12 @@ let navBarTabs = [
     { text: "exhibits", href: "/exhibits" },
     { text: "contact", href: "/contact.html" },
 ]
-let cardInfo = [
-    {}
+let cardsInfo = [
+    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
+    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
+    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
+    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
+    { title: "title", subTitle: "subtitle", date: 1900, text: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
 ]
 
 //selected title for page to ensure js was being read by index.html
@@ -23,9 +27,24 @@ let headerEl = document.getElementById("header")
 headerEl.appendChild(navBar);
 navBar.classList.add("flex-around")
 
+//used forEach to make an <a> element for each tab
 navBarTabs.forEach((link) => {
     const navTabs = document.createElement("a");
     navTabs.setAttribute("href", link.href);
     navTabs.textContent = link.text;
     navBar.appendChild(navTabs)
 })
+
+// cards
+const cardContainer = document.getElementById("card-container")
+console.log(cardContainer)
+const fragment = new DocumentFragment();
+
+cardsInfo.forEach((card) => {
+    infoCard = document.createElement("div")
+    title = document.createElement("h3")
+    title.textContent = card.title
+    infoCard.appendChild(title)
+    cardContainer.appendChild(infoCard)
+})
+console.log(infoCard)
