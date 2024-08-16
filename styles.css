@@ -1,3 +1,15 @@
-:root {
-    --main-bg: yellow;
+body { 
+    background-color:rgb(203, 210, 210);
+}
+
+.flex-ctr { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
 }
