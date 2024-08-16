@@ -85,7 +85,7 @@ Requirements(18):
 14. Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
 <!-- same as above - gotta dig deeper into this  -->
 15. Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
-<!-- so far so good - techically it is an MPA right now not and SBA but other than that is is working  -->
+<!-- so far so good - techically it is an MPA right now not and SBA but it is working  -->
 16. Commit frequently to the git repository. (8 - 10 commits)
     * committed at least 9 times already 
 17. Include a README file that contains a description of your application.

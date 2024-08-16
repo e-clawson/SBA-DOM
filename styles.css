@@ -5,10 +5,14 @@ body {
 }
 
 nav {
-    background-color: rgb(100, 162, 215);
+    background-color: rgb(117, 160, 197);
     color: beige;
     height: 100%
 
+}
+
+nav :hover {
+    background-color: rgb(180, 213, 241);
 }
 
 .flex-ctr { 

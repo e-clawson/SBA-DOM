@@ -5,6 +5,8 @@ let navBarTabs = [
     { text: "exhibits", href: "/exhibits" },
     { text: "contact", href: "/contact.html" },
 ]
+
+// created cardsInfo to have data to populate information cards
 let cardsInfo = [
     { title: "title", subTitle: "subtitle", date: 1900, textBody: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
     { title: "title", subTitle: "subtitle", date: 1900, textBody: "here is where all the text will go", src: "/imgs/bridge\ lift.jpg"},
@@ -35,7 +37,9 @@ navBarTabs.forEach((link) => {
     navBar.appendChild(navTabs)
 })
 
-// cards
+navBar.onclick
+
+// creation of information cards
 const cardContainer = document.getElementById("card-container")
 console.log(cardContainer)
 const fragment = new DocumentFragment();
