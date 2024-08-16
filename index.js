@@ -41,26 +41,30 @@ console.log(cardContainer)
 const fragment = new DocumentFragment();
 
 cardsInfo.forEach((card) => {
-    infoCard = document.createElement("div");
-    infoCard.classList.add("card")
+    let infoCard = document.createElement("div");
+    infoCard.classList.add("card");
 
-    title = document.createElement("h2");
+    let title = document.createElement("h2");
     title.textContent = card.title;
 
-    subTitle = document.createElement("h3");
+    let cardImage = new Image( 200, 100)
+    cardImage.setAttribute("src", card.src);
+
+    let subTitle = document.createElement("h3");
     subTitle.textContent = card.subTitle;
 
-    date = document.createElement("p");
+    let date = document.createElement("p");
     date.textContent = card.date;
 
-    textBody = document.createElement("p");
+    let textBody = document.createElement("p");
     textBody.textContent = card.textBody;
 
     infoCard.appendChild(title);
+    infoCard.appendChild(cardImage);
     infoCard.appendChild(subTitle);
     infoCard.appendChild(date);
     infoCard.appendChild(textBody);
     
-    fragment.append(infoCard)
+    fragment.append(infoCard);
 })
-cardContainer.append(fragment)
+cardContainer.append(fragment);
