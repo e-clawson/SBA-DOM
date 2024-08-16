@@ -16,8 +16,13 @@ console.log(title)
 //created a nav element, created a query for the header, 
 // and appended the navBar to the header element 
 let navBar = document.createElement("nav")
-let headerEl = document.querySelector("header")
+let headerEl = document.getElementById("header")
 headerEl.appendChild(navBar);
 navBar.classList.add("flex-around")
 
-// navBarTabs.forEach
+navBarTabs.forEach((link) => {
+    const navTabs = document.createElement("a");
+    navTabs.setAttribute("href", link.href);
+    navTabs.textContent = link.text;
+    navBar.appendChild(navTabs)
+})

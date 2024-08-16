@@ -1,5 +1,14 @@
 body { 
     background-color:rgb(203, 210, 210);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+}
+
+nav {
+    background-color: rgb(100, 162, 215);
+    color: beige;
+    height: 100%
+
 }
 
 .flex-ctr { 
@@ -12,4 +21,11 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center; 
+}
+
+.banner {
+    background-image: url(/imgs/bridge\ lift.jpg);
+    background-size: cover;
+    display: flex;
+    height: 300px;
 }
