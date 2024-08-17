@@ -1,9 +1,9 @@
-//created navBar tabs data to populate the NavBer 
+//created navBar tabs data to populate the NavBar 
 let navBarTabs = [
-    { text: "home", href: "/index.html" },
-    { text: "about", href: "/about.html" },
-    { text: "exhibits", href: "/exhibits" },
-    { text: "contact", href: "/contact.html" },
+    { text: "home", class:""},
+    { text: "about", class:"" },
+    { text: "exhibits", class:""},
+    { text: "contact", class:""},
 ]
 
 // created cardsInfo to have data to populate information cards
@@ -31,36 +31,35 @@ navBar.classList.add("flex-around")
 //used forEach to make an <a> element for each tab
 navBarTabs.forEach((link) => {
     const navTabs = document.createElement("a");
-    navTabs.setAttribute("href", link.href);
     navTabs.textContent = link.text;
     navBar.appendChild(navTabs)
 })
 
-// navBar.addEventListener("click", (event) => {
-//     console.log(event.target)
-//     event.preventDefault();
-//     if (event.target !== "a"){
-//         console.log("made it to a!")
-//         // event.target.classList.toggle("active")
-//         navBarTabs.forEach((link) => {
-//             console.log(link)
-//           let isCurrentEvent = link == event.target;
-//           if (!isCurrentEvent) {
-//             console.log(link)
-//             link.classList.remove("active");
-//           }
-//           if (isCurrentEvent) {
-//             if (link.classList == "active") {
-//               console.log("inactivate it");
-//               link.classList.remove("active");
-//             } else {
-//               console.log("activate it");
-//               link.classList.add("active");
-//             } 
-//           }
-//         });
-//     }
-// });
+let navTabs = document.querySelectorAll("a")
+console.log(navTabs)
+navBar.addEventListener("click", (event) => {
+    console.log(event.target)
+    event.preventDefault();
+    if (event.target !== "a"){
+        navTabs.forEach((link) => {
+            console.log(link)
+          let isCurrentEvent = link == event.target;
+          if (link !== event.target) {
+            console.log("not equal")
+            link.classList.remove("active");
+          }
+          if (isCurrentEvent) {
+            if (link.classList == "active") {
+              console.log("inactivate it");
+              link.classList.remove("active");
+            } else {
+              console.log("activate it");
+              link.classList.add("active");
+            } 
+          }
+        });
+    }
+});
 
 // creation of information cards
 const cardContainer = document.getElementById("card-container")
@@ -97,16 +96,40 @@ cardsInfo.forEach((card) => {
 
 // contact form 
 
-let submitButton = document.getElementById("submit")
-console.log(submitButton);
-let hello = document.getElementById("form-container")
-console.log(hello)
+// let submitButton = document.getElementById("submit")
 
-submitButton.addEventListener("click", (submission) => {
+// submitButton.addEventListener("click", (submission) => {
+//     submission.preventDefault();
+//     console.log(submission)
+//     let thanksMessage = document.getElementById("form-container");
+//     thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
+
+//     let nameVal = submission.firstName
+//     console.log(nameVal)
+// })
+
+let contactForm = document.getElementById("contact-form");
+
+contactForm.onsubmit = function() {submitFunction()};
+
+function submitFunction() {
     submission.preventDefault();
     console.log(submission)
     let thanksMessage = document.getElementById("form-container");
-    console.log(thanksMessage)
     thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
-    document.appendChild(thanksMessage)
-})
+    // alert("submitted")
+}
+
+
+
+// submitButton.addEventListener("submit", validateName);
+
+// 1 registration form
+// function validateName() {
+//   let nameVal = submitName.value;
+//   console.log(nameVal);
+
+//   if (nameVal.length === 0) {
+//     alert("you must enter a name!");
+//   } 
+// }

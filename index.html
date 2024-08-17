@@ -22,10 +22,35 @@
         <h1>Welcome to the Bridgehouse Museum Website!</h1>
     </main>
 
-    <div id="card-container"> 
+    <!-- About -->
+     <div id="about">
 
+     </div>
+    
+    <!-- display cards -->
+     <div id="exhibits">
+        <div id="card-container"></div>
     </div>
 
+    <!-- contact form -->
+     <div id="contact">
+        
+         <!-- form container -->
+        <div class="form-container" id="form-container">
+        <h3 id="contact">Contact Us:</h3>
+
+        <form id="contact-form" >
+            <input name="firstname" type="text" placeholder="First Name"/>
+            <input name="lastname" type="text" placeholder="Last Name"/>
+            <input name="email" type="email" placeholder="Email Address" autocomplete="off"/>
+            <input name="message" type="text" placeholder="Please Type Your Message Here"/>
+            
+            <input type="checkbox" name="newsletter" id="newsletter" />
+            <label for="newsletter">Sign Up For Our Newsletter</label>
+            <input type="submit" value="Submit" id="submit" />
+        </form>
+        </div>
+     </div>
 
     <script src="index.js"></script>
 </body>

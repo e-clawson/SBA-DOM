@@ -77,9 +77,16 @@ Requirements(18):
 9. Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
 <!-- update the nav bar to change color on click like we did in our lessons  - working on this but it is currently broken -->
 10. Modify at least one attribute of an element in response to user interaction.
+<!-- not sure what to do for this i feel like multiple other reuqirements satisfy this  -->
 11. Register at least two different event listeners and create the associated event handler functions.
 <!-- on click for the nav bar and on submit for the contact form  -->
+<!-- or could possibly use window. -->
+    * one for the submit form - on click a thank you message appears 
+
 12. Use at least two Browser Object Model (BOM) properties or methods.
+<!-- could use window.location method to add the page location to each page -->
+<!-- or could possibly use window.assign to load new page -->
+
 13. Include at least one form and/or input with HTML attribute validation.
 <!-- contact form - require name to be filled, require email to match email requirements -->
 14. Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
