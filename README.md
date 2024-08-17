@@ -60,27 +60,48 @@ Create your application locally, and initialize a local git repo. Make frequent 
 Requirements(18): 
 
 1. Cache at least one element using selectElementById.
+
     * added a getElementById to cache the header element in the variable headerEl 
+
 2. Cache at least one element using querySelector or querySelectorAll.
+
     * added a querySelector to index.js to find the first instance of an h1 to cache in the variable headerEl
+
 3. Use the parent-child-sibling relationship to navigate between elements at least once (firstChild, lastChild, parentNode, nextElementSibling, etc.).
+<!--  not sure what to do for this  -->
 4. Iterate over a collection of elements to accomplish some task. (forEach)
+
     * utilized forEach to iterate over the collection navBarTabs to create a tags with links for each to populate the navigation bar 
+
 5. Create at least one element using createElement.
+
     * utilized the above forEach to create <a> elements for each navbar item 
+
 6. Use appendChild and/or prepend to add new elements to the DOM.
+
     * utilized the above forEach to append each new <a> element to the navBar 
+
 7. Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content. 
+
     * utilized DocumentFragment to create card template - wasn't sure how to do this at first but followed the following documentation (https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) and example and modified to cards instead of list items. 
+
 8. Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
+
     * on the contact form, added a thank you message that pops up when the submit button is pressed. 
+
 9. Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
-<!-- update the nav bar to change color on click like we did in our lessons  - working on this but it is currently broken -->
+
+    * update the nav bar to change color on click like we did in our lessons 
+
 10. Modify at least one attribute of an element in response to user interaction.
+
 <!-- not sure what to do for this i feel like multiple other reuqirements satisfy this  -->
+
 11. Register at least two different event listeners and create the associated event handler functions.
+
 <!-- on click for the nav bar and on submit for the contact form  -->
 <!-- or could possibly use window. -->
+
     * one for the submit form - on click a thank you message appears 
 
 12. Use at least two Browser Object Model (BOM) properties or methods.

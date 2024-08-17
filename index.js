@@ -36,7 +36,7 @@ navBarTabs.forEach((link) => {
 })
 
 let navTabs = document.querySelectorAll("a")
-console.log(navTabs)
+
 navBar.addEventListener("click", (event) => {
     console.log(event.target)
     event.preventDefault();
@@ -51,7 +51,7 @@ navBar.addEventListener("click", (event) => {
           if (isCurrentEvent) {
             if (link.classList == "active") {
               console.log("inactivate it");
-              link.classList.remove("active");
+              link.classList.remove("active"); 
             } else {
               console.log("activate it");
               link.classList.add("active");
@@ -60,6 +60,15 @@ navBar.addEventListener("click", (event) => {
         });
     }
 });
+
+function itemDisplay() {
+    var theDiv = document.getElementById("myDIV");
+    if (theDiv.style.display === "none") {
+      theDiv.style.display = "block";
+    } else {
+      theDiv.style.display = "none";
+    }
+  }
 
 // creation of information cards
 const cardContainer = document.getElementById("card-container")
@@ -92,7 +101,7 @@ cardsInfo.forEach((card) => {
     
     fragment.append(infoCard);
 })
-// cardContainer.append(fragment);
+cardContainer.append(fragment);
 
 // contact form 
 
