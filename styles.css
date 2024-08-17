@@ -15,6 +15,11 @@ nav :hover {
     background-color: rgb(180, 213, 241);
 }
 
+nav a.active {
+    background-color: rgb(180, 213, 241);
+    color: rgb(116, 114, 114);
+  }
+
 .flex-ctr { 
     display: flex;
     justify-content: center;
@@ -37,7 +42,7 @@ nav :hover {
 /* styling for individual cards */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: 0.5s;
     width: 40%;
     border-radius: 5px;
   }

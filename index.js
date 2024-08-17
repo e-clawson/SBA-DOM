@@ -20,7 +20,6 @@ let cardsInfo = [
 let title = document.querySelector("h1")
 title.style.backgroundColor = "lightblue";
 title.classList.add("flex-ctr");
-console.log(title)
 
 //created a nav element, created a query for the header, 
 // and appended the navBar to the header element 
@@ -37,11 +36,34 @@ navBarTabs.forEach((link) => {
     navBar.appendChild(navTabs)
 })
 
-navBar.onclick
+// navBar.addEventListener("click", (event) => {
+//     console.log(event.target)
+//     event.preventDefault();
+//     if (event.target !== "a"){
+//         console.log("made it to a!")
+//         // event.target.classList.toggle("active")
+//         navBarTabs.forEach((link) => {
+//             console.log(link)
+//           let isCurrentEvent = link == event.target;
+//           if (!isCurrentEvent) {
+//             console.log(link)
+//             link.classList.remove("active");
+//           }
+//           if (isCurrentEvent) {
+//             if (link.classList == "active") {
+//               console.log("inactivate it");
+//               link.classList.remove("active");
+//             } else {
+//               console.log("activate it");
+//               link.classList.add("active");
+//             } 
+//           }
+//         });
+//     }
+// });
 
 // creation of information cards
 const cardContainer = document.getElementById("card-container")
-console.log(cardContainer)
 const fragment = new DocumentFragment();
 
 cardsInfo.forEach((card) => {
@@ -71,4 +93,9 @@ cardsInfo.forEach((card) => {
     
     fragment.append(infoCard);
 })
-cardContainer.append(fragment);
+// cardContainer.append(fragment);
+
+// contact form 
+
+let submission = document.querySelector("submit")
+console.log(submission)
