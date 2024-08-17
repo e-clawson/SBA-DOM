@@ -75,7 +75,7 @@ Requirements(18):
 8. Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
 <!-- on click/on submit for contact form, add an <h1> to the screen to replace the contact for that says "thank you for contacting us, we will get back to you soon!" -->
 9. Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
-<!-- update the nav bar to change color on click like we did in our lessons -->
+<!-- update the nav bar to change color on click like we did in our lessons  - working on this but it is currently broken -->
 10. Modify at least one attribute of an element in response to user interaction.
 11. Register at least two different event listeners and create the associated event handler functions.
 <!-- on click for the nav bar and on submit for the contact form  -->

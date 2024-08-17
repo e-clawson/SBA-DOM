@@ -97,5 +97,16 @@ cardsInfo.forEach((card) => {
 
 // contact form 
 
-let submission = document.querySelector("submit")
-console.log(submission)
+let submitButton = document.getElementById("submit")
+console.log(submitButton);
+let hello = document.getElementById("form-container")
+console.log(hello)
+
+submitButton.addEventListener("click", (submission) => {
+    submission.preventDefault();
+    console.log(submission)
+    let thanksMessage = document.getElementById("form-container");
+    console.log(thanksMessage)
+    thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
+    document.appendChild(thanksMessage)
+})
