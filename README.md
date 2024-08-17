@@ -73,7 +73,7 @@ Requirements(18):
 7. Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content. 
     * utilized DocumentFragment to create card template - wasn't sure how to do this at first but followed the following documentation (https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) and example and modified to cards instead of list items. 
 8. Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
-<!-- on click/on submit for contact form, add an <h1> to the screen to replace the contact for that says "thank you for contacting us, we will get back to you soon!" -->
+    * on the contact form, added a thank you message that pops up when the submit button is pressed. 
 9. Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
 <!-- update the nav bar to change color on click like we did in our lessons  - working on this but it is currently broken -->
 10. Modify at least one attribute of an element in response to user interaction.
