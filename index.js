@@ -39,13 +39,9 @@ navBarTabs.forEach((link) => {
 let navTabs = document.querySelectorAll("a")
 
 navBar.addEventListener("click", (event) => {
-    console.log(event.target)
     let eventClass = event.target.classList
     let realEventArray = Array.from(eventClass)
-    console.log(realEventArray)
-    console.log(typeof realEventArray)
-    console.log(typeof eventClass)
-    console.log(eventClass)
+    
     event.preventDefault();
     if (event.target !== "a"){
         navTabs.forEach((link) => {
@@ -58,52 +54,69 @@ navBar.addEventListener("click", (event) => {
               link.classList.remove("active"); 
             } else {
               link.classList.add("active");
-              itemDisplay(realEventArray);
+              let info = link.classList;
+              let otherInfo = Array.from(info);
+              console.log(otherInfo);
+              itemDisplay(otherInfo);
             } 
           }
         });
     }
 });
 
-function itemDisplay(realEventArray) {
+function itemDisplay(otherInfo) {
     let homeDiv = document.getElementById("home");
-    let homeDivId = homeDiv.id;
+    // let homeDivId = homeDiv.id;
+    let homeDivArray = homeDiv.classList
+    let realHomeDivArray = Array.from(homeDivArray)
     let aboutDiv = document.getElementById("about");
-    let aboutDivId = aboutDiv.id;
+    // let aboutDivId = aboutDiv.id;
+    let aboutDivArray = aboutDiv.classList
+    let realAboutDivArray = Array.from(aboutDivArray)
     let exhibitDiv = document.getElementById("exhibits");
-    let exhibitDivId = exhibitDiv.id;
+    // let exhibitDivId = exhibitDiv.id;
+    let exhibitDivArray = exhibitDiv.classList
+    let realExhibitDivArray = Array.from(exhibitDivArray)
     let contactDiv = document.getElementById("contact");
-    let contactDivId = contactDiv.id;
-    console.log(homeDiv);
-    console.log(aboutDiv);
-    console.log(exhibitDiv);
-    console.log(contactDiv);
+    // let contactDivId = contactDiv.id;
+    let contactDivArray = contactDiv.classList
+    let realContactDivArray = Array.from(contactDivArray)
+    // console.log(homeDiv);
+    // console.log(aboutDiv);
+    // console.log(exhibitDiv);
+    // console.log(contactDiv);
+    
 
-    if (realEventArray.includes(homeDivId) && homeDiv.style.display == "none") {
-        homeDiv.classList.remove("display")
+    if (otherInfo.includes("home") && otherInfo.includes("active")) {
+        homeDiv.classList.remove("default")
+        aboutDiv.classList.add("default");
+        exhibitDiv.classList.add("default");
+        contactDiv.classList.add("default");
     } 
-    if (realEventArray.includes(aboutDivId) == true && aboutDiv.style.display == "none") {
-        aboutDiv.style.bottom = "block";
+    if (otherInfo.includes("about") == true && realAboutDivArray.includes("default")) {
+        homeDiv.classList.add("default");
+        aboutDiv.classList.remove("default");
+        exhibitDiv.classList.add("default");
+        contactDiv.classList.add("default");
     } 
-    if (realEventArray.includes(exhibitDivId) == true && exhibitDiv.style.display == "none") {
-        exhibitDiv.style.display = "block";
+    if (otherInfo.includes("exhibit") == true && realExhibitDivArray.includes("default")) {
+        homeDiv.classList.add("default");
+        aboutDiv.classList.add("default");
+        exhibitDiv.classList.remove("default");
+        contactDiv.classList.add("default");
     }
-    if (realEventArray.includes(contactDivId) == true && contactDiv.style.display == "none") {
-        contactDiv.style.display = "block";
+    if (otherInfo.includes("contact") == true && realContactDivArray.includes("default")) {
+        homeDiv.classList.add("default");
+        aboutDiv.classList.add("default");
+        exhibitDiv.classList.add("default");
+        contactDiv.classList.remove("default");
     }
-    else {
-      homeDiv.style.display.add("display")
-      aboutDiv.style.bottom = "0%";
-      exhibitDiv.style.display = "none";
-      contactDiv.style.display = "none";
-    }
-
   }
 
 
 // creation of information cards
 const cardContainer = document.getElementById("card-container")
-cardContainer.classList.add("flex-around")
+// cardContainer.classList.add("flex-around")
 cardContainer.style.padding = "10px";
 const fragment = new DocumentFragment();
 
