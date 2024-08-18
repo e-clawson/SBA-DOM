@@ -1,9 +1,9 @@
 //created navBar tabs data to populate the NavBar 
 let navBarTabs = [
-    { text: "home", class:""},
-    { text: "about", class:"" },
-    { text: "exhibits", class:""},
-    { text: "contact", class:""},
+    { text: "home", class:"", id:"home"},
+    { text: "about", class:"", id:"about" },
+    { text: "exhibits", class:"", id:"exhibits"},
+    { text: "contact", class:"", id:"contact"},
 ]
 
 // created cardsInfo to have data to populate information cards
@@ -72,6 +72,8 @@ function itemDisplay() {
 
 // creation of information cards
 const cardContainer = document.getElementById("card-container")
+cardContainer.classList.add("flex-around")
+cardContainer.style.padding = "10px";
 const fragment = new DocumentFragment();
 
 cardsInfo.forEach((card) => {
@@ -98,6 +100,8 @@ cardsInfo.forEach((card) => {
     infoCard.appendChild(subTitle);
     infoCard.appendChild(date);
     infoCard.appendChild(textBody);
+    infoCard.style.padding = "10px";
+  
     
     fragment.append(infoCard);
 })
