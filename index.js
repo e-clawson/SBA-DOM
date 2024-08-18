@@ -150,17 +150,18 @@ function itemDisplay(otherInfo) {
 
 // contact form 
 
-// let submitButton = document.getElementById("submit")
+let submitButton = document.getElementById("submit")
+console.log(submitButton)
 
-// submitButton.addEventListener("click", (submission) => {
-//     submission.preventDefault();
-//     console.log(submission)
-//     let thanksMessage = document.getElementById("form-container");
-//     thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
+submitButton.addEventListener("click", (submission) => {
+    submission.preventDefault();
+    console.log(submission)
+    let thanksMessage = document.getElementById("form-container");
+    thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
 
-//     let nameVal = submission.firstName
-//     console.log(nameVal)
-// })
+    // let nameVal = submission.firstName
+    // console.log(nameVal)
+})
 
 let contactForm = document.getElementById("contact-form");
 console.log(contactForm)
