@@ -1,9 +1,9 @@
 //created navBar tabs data to populate the NavBar 
 let navBarTabs = [
-    { text: "home", class:"", id:"home"},
-    { text: "about", class:"", id:"about" },
-    { text: "exhibits", class:"", id:"exhibits"},
-    { text: "contact", class:"", id:"contact"},
+    { text: "home", class:"", class:"home"},
+    { text: "about", class:"", class:"about" },
+    { text: "exhibits", class:"", class:"exhibits"},
+    { text: "contact", class:"", class:"contact"},
 ]
 
 // created cardsInfo to have data to populate information cards
@@ -32,6 +32,7 @@ navBar.classList.add("flex-around")
 navBarTabs.forEach((link) => {
     const navTabs = document.createElement("a");
     navTabs.textContent = link.text;
+    navTabs.classList = link.class
     navBar.appendChild(navTabs)
 })
 
@@ -39,36 +40,66 @@ let navTabs = document.querySelectorAll("a")
 
 navBar.addEventListener("click", (event) => {
     console.log(event.target)
+    let eventClass = event.target.classList
+    let realEventArray = Array.from(eventClass)
+    console.log(realEventArray)
+    console.log(typeof realEventArray)
+    console.log(typeof eventClass)
+    console.log(eventClass)
     event.preventDefault();
     if (event.target !== "a"){
         navTabs.forEach((link) => {
-            console.log(link)
           let isCurrentEvent = link == event.target;
           if (link !== event.target) {
-            console.log("not equal")
             link.classList.remove("active");
           }
           if (isCurrentEvent) {
             if (link.classList == "active") {
-              console.log("inactivate it");
               link.classList.remove("active"); 
             } else {
-              console.log("activate it");
               link.classList.add("active");
+              itemDisplay(realEventArray);
             } 
           }
         });
     }
 });
 
-function itemDisplay() {
-    var theDiv = document.getElementById("myDIV");
-    if (theDiv.style.display === "none") {
-      theDiv.style.display = "block";
-    } else {
-      theDiv.style.display = "none";
+function itemDisplay(realEventArray) {
+    let homeDiv = document.getElementById("home");
+    let homeDivId = homeDiv.id;
+    let aboutDiv = document.getElementById("about");
+    let aboutDivId = aboutDiv.id;
+    let exhibitDiv = document.getElementById("exhibits");
+    let exhibitDivId = exhibitDiv.id;
+    let contactDiv = document.getElementById("contact");
+    let contactDivId = contactDiv.id;
+    console.log(homeDiv);
+    console.log(aboutDiv);
+    console.log(exhibitDiv);
+    console.log(contactDiv);
+
+    if (realEventArray.includes(homeDivId) && homeDiv.style.display == "none") {
+        homeDiv.classList.remove("display")
+    } 
+    if (realEventArray.includes(aboutDivId) == true && aboutDiv.style.display == "none") {
+        aboutDiv.style.bottom = "block";
+    } 
+    if (realEventArray.includes(exhibitDivId) == true && exhibitDiv.style.display == "none") {
+        exhibitDiv.style.display = "block";
     }
+    if (realEventArray.includes(contactDivId) == true && contactDiv.style.display == "none") {
+        contactDiv.style.display = "block";
+    }
+    else {
+      homeDiv.style.display.add("display")
+      aboutDiv.style.bottom = "0%";
+      exhibitDiv.style.display = "none";
+      contactDiv.style.display = "none";
+    }
+
   }
+
 
 // creation of information cards
 const cardContainer = document.getElementById("card-container")
