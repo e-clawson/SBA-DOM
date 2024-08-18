@@ -2,7 +2,7 @@
 let navBarTabs = [
     { text: "home", class:"", class:"home"},
     { text: "about", class:"", class:"about" },
-    { text: "exhibits", class:"", class:"exhibits"},
+    { text: "exhibits", class:"", class:"exhibit"},
     { text: "contact", class:"", class:"contact"},
 ]
 
@@ -42,6 +42,7 @@ navBarTabs.forEach((link) => {
 })
 
 // creation of information cards
+
 const cardContainer = document.getElementById("card-container")
 cardContainer.classList.add("flex-around")
 cardContainer.style.padding = "10px";
@@ -71,11 +72,13 @@ cardsInfo.forEach((card) => {
     infoCard.appendChild(subTitle);
     infoCard.appendChild(date);
     infoCard.appendChild(textBody);
-    infoCard.style.padding = "10px";
+    // infoCard.style.padding = "10px";
     
     fragment.append(infoCard);
-})
-cardContainer.append(fragment);
+    })
+
+    cardContainer.append(fragment);
+
 
 let navTabs = document.querySelectorAll("a")
 
@@ -116,6 +119,7 @@ function itemDisplay(otherInfo) {
     let exhibitDiv = document.getElementById("exhibits");
     // let exhibitDivId = exhibitDiv.id;
     let exhibitDivArray = exhibitDiv.classList
+    console.log(exhibitDivArray)
     let realExhibitDivArray = Array.from(exhibitDivArray)
     let contactDiv = document.getElementById("contact");
     // let contactDivId = contactDiv.id;
@@ -158,11 +162,9 @@ submitButton.addEventListener("click", (submission) => {
     console.log(submission)
     let thanksMessage = document.getElementById("form-container");
     thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
-
-    // let nameVal = submission.firstName
-    // console.log(nameVal)
 })
 
+// 
 let contactForm = document.getElementById("contact-form");
 console.log(contactForm)
 let firstName = contactForm.elements["firstname"];
@@ -171,26 +173,20 @@ let lastName = contactForm.elements["lastname"];
 let email = contactForm.elements["email"];
 let message = contactForm.elements["message"];
 
-contactForm.onsubmit = function() {submitFunction()};
+// contactForm.addEventListener("submit", validate);
 
-function submitFunction() {
-    submission.preventDefault();
-    console.log(submission)
-    let thanksMessage = document.getElementById("form-container");
-    thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
-    // alert("submitted")
-}
+// function validate(event) {
+//     const nameValidation = validateFirstName;
+//     if (nameValidation === false)
+// }
 
-
-
-// submitButton.addEventListener("submit", validateName);
-
-// 1 registration form
-// function validateName() {
-//   let nameVal = submitName.value;
-//   console.log(nameVal);
-
-//   if (nameVal.length === 0) {
-//     alert("you must enter a name!");
-//   } 
+// function validateFirstName() {
+//     if (firstName.value === ""){
+//         alert("please provide a name")
+//         firstName.focus();
+//         return false;
+//     } else {
+//         return true;
+//     }
+//     return firstName.value
 // }

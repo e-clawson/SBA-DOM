@@ -106,6 +106,7 @@ Requirements(18):
 <!-- or could possibly use window. -->
 
     * one for the submit form - on click a thank you message appears 
+    
 
 12. Use at least two Browser Object Model (BOM) properties or methods.
 <!-- could use window.location method to add the page location to each page -->
@@ -116,7 +117,7 @@ Requirements(18):
 14. Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
 <!-- same as above - gotta dig deeper into this  -->
 15. Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
-<!-- so far so good - rn the item cards aren't displaying  -->
+<!-- so far so good, but rn the item cards aren't displaying  -->
 16. Commit frequently to the git repository. (8 - 10 commits)
     * committed at least 9 times already 
 17. Include a README file that contains a description of your application.
