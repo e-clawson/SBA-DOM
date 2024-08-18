@@ -19,7 +19,12 @@ let cardsInfo = [
 //sert it's backgronud to light blue 
 let title = document.querySelector("h1")
 title.style.backgroundColor = "lightblue";
-title.classList.add("flex-ctr");
+title.style.opacity = "70%";
+title.style.alignContent = "center";
+title.style.width = "50%";
+title.style.margin = "auto";
+title.style.padding = "15px"
+title.style.borderRadius = "10px"
 
 //created a nav element, created a query for the header, 
 // and appended the navBar to the header element 
@@ -91,11 +96,13 @@ navBar.addEventListener("click", (event) => {
               let otherInfo = Array.from(info);
               console.log(otherInfo);
               itemDisplay(otherInfo);
+              
             } 
           }
         });
     }
 });
+console.log()
 
 function itemDisplay(otherInfo) {
     let homeDiv = document.getElementById("home");
@@ -156,6 +163,12 @@ function itemDisplay(otherInfo) {
 // })
 
 let contactForm = document.getElementById("contact-form");
+console.log(contactForm)
+let firstName = contactForm.elements["firstname"];
+console.log(firstName);
+let lastName = contactForm.elements["lastname"];
+let email = contactForm.elements["email"];
+let message = contactForm.elements["message"];
 
 contactForm.onsubmit = function() {submitFunction()};
 

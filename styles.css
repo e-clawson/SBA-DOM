@@ -70,3 +70,10 @@ a {
   .container {
     padding: 2px 16px;
   }
+
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
