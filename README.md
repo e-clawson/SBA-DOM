@@ -88,6 +88,7 @@ Requirements(18):
 8. Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
 
     * on the contact form, added a thank you message that pops up when the submit button is pressed. 
+    <!-- not working right now need to fix  -->
 
 9. Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
 
@@ -99,7 +100,7 @@ Requirements(18):
 
 11. Register at least two different event listeners and create the associated event handler functions.
 
-<!-- on click for the nav bar and on submit for the contact form  -->
+<!-- on click for the nav bar and on submit for the contact form  created an event handler to change the display ont he page when the different tabs of navbar are clicked -->
 <!-- or could possibly use window. -->
 
     * one for the submit form - on click a thank you message appears 

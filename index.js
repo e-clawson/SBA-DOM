@@ -36,12 +36,45 @@ navBarTabs.forEach((link) => {
     navBar.appendChild(navTabs)
 })
 
+// creation of information cards
+const cardContainer = document.getElementById("card-container")
+cardContainer.classList.add("flex-around")
+cardContainer.style.padding = "10px";
+const fragment = new DocumentFragment();
+
+cardsInfo.forEach((card) => {
+    let infoCard = document.createElement("div");
+    infoCard.classList.add("card");
+
+    let title = document.createElement("h2");
+    title.textContent = card.title;
+
+    let cardImage = new Image( 200, 100)
+    cardImage.setAttribute("src", card.src);
+
+    let subTitle = document.createElement("h3");
+    subTitle.textContent = card.subTitle;
+
+    let date = document.createElement("p");
+    date.textContent = card.date;
+
+    let textBody = document.createElement("p");
+    textBody.textContent = card.textBody;
+
+    infoCard.appendChild(title);
+    infoCard.appendChild(cardImage);
+    infoCard.appendChild(subTitle);
+    infoCard.appendChild(date);
+    infoCard.appendChild(textBody);
+    infoCard.style.padding = "10px";
+    
+    fragment.append(infoCard);
+})
+cardContainer.append(fragment);
+
 let navTabs = document.querySelectorAll("a")
 
 navBar.addEventListener("click", (event) => {
-    let eventClass = event.target.classList
-    let realEventArray = Array.from(eventClass)
-    
     event.preventDefault();
     if (event.target !== "a"){
         navTabs.forEach((link) => {
@@ -81,11 +114,6 @@ function itemDisplay(otherInfo) {
     // let contactDivId = contactDiv.id;
     let contactDivArray = contactDiv.classList
     let realContactDivArray = Array.from(contactDivArray)
-    // console.log(homeDiv);
-    // console.log(aboutDiv);
-    // console.log(exhibitDiv);
-    // console.log(contactDiv);
-    
 
     if (otherInfo.includes("home") && otherInfo.includes("active")) {
         homeDiv.classList.remove("default")
@@ -112,44 +140,6 @@ function itemDisplay(otherInfo) {
         contactDiv.classList.remove("default");
     }
   }
-
-
-// creation of information cards
-const cardContainer = document.getElementById("card-container")
-// cardContainer.classList.add("flex-around")
-cardContainer.style.padding = "10px";
-const fragment = new DocumentFragment();
-
-cardsInfo.forEach((card) => {
-    let infoCard = document.createElement("div");
-    infoCard.classList.add("card");
-
-    let title = document.createElement("h2");
-    title.textContent = card.title;
-
-    let cardImage = new Image( 200, 100)
-    cardImage.setAttribute("src", card.src);
-
-    let subTitle = document.createElement("h3");
-    subTitle.textContent = card.subTitle;
-
-    let date = document.createElement("p");
-    date.textContent = card.date;
-
-    let textBody = document.createElement("p");
-    textBody.textContent = card.textBody;
-
-    infoCard.appendChild(title);
-    infoCard.appendChild(cardImage);
-    infoCard.appendChild(subTitle);
-    infoCard.appendChild(date);
-    infoCard.appendChild(textBody);
-    infoCard.style.padding = "10px";
-  
-    
-    fragment.append(infoCard);
-})
-cardContainer.append(fragment);
 
 // contact form 
 
