@@ -105,7 +105,6 @@ navBar.addEventListener("click", (event) => {
         });
     }
 });
-console.log()
 
 function itemDisplay(otherInfo) {
     let homeDiv = document.getElementById("home");
@@ -154,39 +153,53 @@ function itemDisplay(otherInfo) {
 
 // contact form 
 
-let submitButton = document.getElementById("submit")
-console.log(submitButton)
-
-submitButton.addEventListener("click", (submission) => {
-    submission.preventDefault();
-    console.log(submission)
-    let thanksMessage = document.getElementById("form-container");
-    thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
-})
-
-// 
 let contactForm = document.getElementById("contact-form");
-console.log(contactForm)
 let firstName = contactForm.elements["firstname"];
-console.log(firstName);
 let lastName = contactForm.elements["lastname"];
 let email = contactForm.elements["email"];
 let message = contactForm.elements["message"];
 
-// contactForm.addEventListener("submit", validate);
+contactForm.addEventListener("submit", onSubmit);
 
-// function validate(event) {
-//     const nameValidation = validateFirstName;
-//     if (nameValidation === false)
-// }
+function validateName() {
+    if (firstName.value == null || firstName.value == ""){
+        alert("please enter a first name!")
+        firstName.focus();
+        return false
+    }
+    else {
+        return true
+    }
+}
 
-// function validateFirstName() {
-//     if (firstName.value === ""){
-//         alert("please provide a name")
-//         firstName.focus();
-//         return false;
-//     } else {
-//         return true;
-//     }
-//     return firstName.value
-// }
+function validateMessage() {
+    if (message.value == null || message.value == ""){
+        alert("please enter a message!")
+        message.focus();
+        return false
+    }
+    else {
+        return true
+    }
+}
+
+// can't get the second validation for the message to work right now it is skipping right to the else 
+//statement regardless of if I have inputs for firstname or message
+
+function onSubmit(event) {
+    event.preventDefault()
+    const validatedName = validateName();
+    const validatedMessage = validateMessage();
+    let thanksMessage = document.getElementById("form-container");
+
+    if (validatedName === false){
+        event.returnValue = false;
+        return false;
+    } if (validatedMessage === false){
+        event.returnValue = false;
+        return false;
+    } else {
+        thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
+        return true;
+    }
+}
