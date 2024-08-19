@@ -116,12 +116,12 @@ function itemDisplay(otherInfo) {
     let aboutDivArray = aboutDiv.classList
     let realAboutDivArray = Array.from(aboutDivArray)
     let exhibitDiv = document.getElementById("exhibits");
-    // let exhibitDivId = exhibitDiv.id;
+  
     let exhibitDivArray = exhibitDiv.classList
-    console.log(exhibitDivArray)
     let realExhibitDivArray = Array.from(exhibitDivArray)
+    
     let contactDiv = document.getElementById("contact");
-    // let contactDivId = contactDiv.id;
+
     let contactDivArray = contactDiv.classList
     let realContactDivArray = Array.from(contactDivArray)
 

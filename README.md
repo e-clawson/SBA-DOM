@@ -6,7 +6,6 @@ This project was built to continue to work through using javascript to create an
 
 For this particular iteration of the project I practiced building out a basic website with a homepage, an about page, an exhibits page, and a contact page with a contact form. 
 
-
 # Download Instructions 
  to run the app, download it and open a live server. 
 
@@ -19,6 +18,8 @@ This time I tried to spend a lot more time planning the project and the steps. I
 
 I really struggled with form validation and in the end, I only got one custom validation to work. I look forward to practicing it more and drilling it so I can get better at it. 
 
+I'm still struggling with my understanding of how to implement BOM techniques specifically. If I had more time, that is another thing I would have dug deeper into. 
+
 - What would you add to, or change about your application if given more time?
 
 If I had more time, I would have built out the exhibits section to include a search bar, and I would add a button to each element that would take you to a display of more information for that particular page. 
@@ -26,7 +27,6 @@ If I had more time, I would have built out the exhibits section to include a sea
 - Use this space to make notes for your future self about anything that you think is important to remember about this process, or that may aid you when attempting something similar again:
 
 I am so proud of myself for the way I have grown throughout this process and I think it is important to acknowledge. This was the first time I was able to solve all my problems on my own and I feel like I really understand what's going on. The first time I learned javascript and DOM Manipulation I really stuggled to understand what was going. This time I understod more, and I was able to use that to solve problems, to really know each line of my code. Although the project is still not the most elegant, I was able to implement more CSS as well and I am proud of that too. I know I have a lot more to work on but I am excited to see where I can go from here. 
-
 
 <!-- Notes from the assignment  -->
 # Introduction
@@ -71,52 +71,50 @@ Requirements(18):
 
 1. Cache at least one element using selectElementById.
 
-    * added a getElementById to cache the header element in the variable headerEl 
+    * added a getElementById to cache the header element in the variable headerEl (index.js line 32) 
 
 2. Cache at least one element using querySelector or querySelectorAll.
 
-    * added a querySelector to index.js to find the first instance of an h1 to cache in the variable headerEl
+    * added a querySelector to index.js to find the first instance of an h1 to cache in the variable title (indexjs line 20)
 
 3. Use the parent-child-sibling relationship to navigate between elements at least once (firstChild, lastChild, parentNode, nextElementSibling, etc.).
-<!--  not sure what to do for this  -->
+
+<!--  not sure what to do for this. I think I need to spend more time digging into this. I couldn't find a way to use it in this project.  -->
+
 4. Iterate over a collection of elements to accomplish some task. (forEach)
 
-    * utilized forEach to iterate over the collection navBarTabs to create a tags with links for each to populate the navigation bar 
+    * utilized forEach to iterate over the collection navBarTabs to create a tags with links for each to populate the navigation bar (indexjs line 37)
 
 5. Create at least one element using createElement.
 
-    * utilized the above forEach to create <a> elements for each navbar item 
+    * utilized the above forEach to create <a> elements for each navbar item (indexjs line 38)
 
 6. Use appendChild and/or prepend to add new elements to the DOM.
 
-    * utilized the above forEach to append each new <a> element to the navBar 
+    * utilized the above forEach to append each new <a> element to the navBar (indexjs line 41)
 
 7. Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content. 
 
-    * utilized DocumentFragment to create card template - wasn't sure how to do this at first but followed the following documentation (https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) and example and modified to cards instead of list items. 
+    * utilized DocumentFragment to create card template - wasn't sure how to do this at first but followed the following documentation (https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) and example and modified to cards instead of list items. (indexjs line 46 - 78)
 
 8. Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
 
-    * on the contact form, added a thank you message that pops up when the submit button is pressed. 
-    <!-- not working right now need to fix  -->
+    * on the contact form, added a thank you message that pops up when the submit button is pressed. (indexjs line 202)
 
 9. Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
 
-    * update the nav bar to change color on click like we did in our lessons 
-    * the page display also changes based on which tab in navbar a user clicks 
+    * update the nav bar to change color on click like we did in our lessons (index lines 85 - 107)
 
 10. Modify at least one attribute of an element in response to user interaction.
 
-<!-- not sure what to do for this i feel like multiple other reuqirements satisfy this  -->
-<!-- attributes - onClick -->
+    * the page display also changes based on which tab in navbar a user clicks (indexjs lines 128 - 150 )
 
 11. Register at least two different event listeners and create the associated event handler functions.
 
-<!-- on click for the nav bar and on submit for the contact form  created an event handler to change the display ont he page when the different tabs of navbar are clicked -->
-<!-- or could possibly use window. -->
+    * on click for the nav bar and on submit for the contact form  created an event handler to change the display ont he page when the different tabs of navbar are clicked
+    (indexjs lines 85 and 162)
 
-    * one for the submit form - on click a thank you message appears 
-    
+    * one for the submit form - associated function for first name validation (indexjs line 164)
 
 12. Use at least two Browser Object Model (BOM) properties or methods.
 <!-- could use window.location method to add the page location to each page -->
@@ -127,9 +125,9 @@ Requirements(18):
 14. Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
 <!-- same as above - gotta dig deeper into this  -->
 15. Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
-<!-- so far so good, but rn the item cards aren't displaying  -->
+<!-- so far so good! got a friend to check it too -->
 16. Commit frequently to the git repository. (8 - 10 commits)
-    * committed at least 9 times already 
+    * committed about 26 times already 
 17. Include a README file that contains a description of your application.
     * please enjoy the current README
 18. Level of effort displayed in creativity, presentation, and user experience.
