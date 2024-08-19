@@ -2,20 +2,30 @@
 
 # About (Description of Application)
 
+This project was built to continue to work through using javascript to create an SPA, utilizing DOM manipulation techniques. For this project, I created a basic SBA similar to what I plan to do for my capstone project, a redesign of the Chicago Bridgehouse Museum's digitsl curation. (https://www.bridgehousemuseum.org/museum-exhibits) 
+
+For this particular iteration of the project I practiced building out a basic website with a homepage, an about page, an exhibits page, and a contact page with a contact form. 
 
 
 # Download Instructions 
-
-
+ to run the app, download it and open a live server. 
 
 # Reflections 
 - What could you have done differently during the planning stages of your project to make the execution easier?
 
+This time I tried to spend a lot more time planning the project and the steps. I feel like no matter what I do, I end up getting stuck on something and it ends up slowing me down, but thanks to my prep I was able to get through a lot more on the first day of work than I anticipated. 
+
 - Were there any requirements that were difficult to implement? What do you think would make them easier to implement in future projects?
+
+I really struggled with form validation and in the end, I only got one custom validation to work. I look forward to practicing it more and drilling it so I can get better at it. 
 
 - What would you add to, or change about your application if given more time?
 
+If I had more time, I would have built out the exhibits section to include a search bar, and I would add a button to each element that would take you to a display of more information for that particular page. 
+
 - Use this space to make notes for your future self about anything that you think is important to remember about this process, or that may aid you when attempting something similar again:
+
+I am so proud of myself for the way I have grown throughout this process and I think it is important to acknowledge. This was the first time I was able to solve all my problems on my own and I feel like I really understand what's going on. The first time I learned javascript and DOM Manipulation I really stuggled to understand what was going. This time I understod more, and I was able to use that to solve problems, to really know each line of my code. Although the project is still not the most elegant, I was able to implement more CSS as well and I am proud of that too. I know I have a lot more to work on but I am excited to see where I can go from here. 
 
 
 <!-- Notes from the assignment  -->

@@ -202,4 +202,5 @@ function onSubmit(event) {
         thanksMessage.innerHTML = "<p> Thank you for messaging us - a member of our team will respond to you shortly!</p>";
         return true;
     }
+    
 }
